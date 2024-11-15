@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="`uppercase px-3 py-2 cursor-pointer rounded key-type-${keyType} text-white flex justify-center items-center transition-colors`"
+    :class="`uppercase py-2 cursor-pointer rounded key-type-${keyType} text-sm sm:text-lg text-white flex justify-center items-center transition-colors`"
   >
     <span v-if="letter.length === 1">
       {{ letter }}

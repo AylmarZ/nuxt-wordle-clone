@@ -53,8 +53,14 @@
         />
       </div>
     </div>
-    <div class="keyboard flex flex-col gap-2">
-      <div v-for="row in keyboard" class="row flex justify-center gap-2">
+    <div class="keyboard flex flex-col gap-2 w-3/4 max-w-xl">
+      <div
+        v-for="row in keyboard"
+        class="row grid justify-center gap-2 w-full"
+        :style="{
+          gridTemplateColumns: `repeat(${row.length}, minmax(0, 1fr))`,
+        }"
+      >
         <Key
           v-for="key in row"
           :key="key.id"
