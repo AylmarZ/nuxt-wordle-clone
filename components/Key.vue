@@ -30,15 +30,15 @@ const props = defineProps({
 
 <style scoped>
 .key-type-empty-bg {
-  @apply bg-empty hover:bg-empty-dark text-black;
+  @apply bg-empty text-black;
 }
 .key-type-correct {
-  @apply bg-correct hover:bg-correct-dark;
+  @apply bg-correct;
 }
 .key-type-present {
-  @apply bg-present hover:bg-present-dark;
+  @apply bg-present;
 }
 .key-type-absent {
-  @apply bg-absent hover:bg-absent-dark;
+  @apply bg-absent;
 }
 </style>
