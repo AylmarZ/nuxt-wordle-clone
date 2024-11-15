@@ -192,6 +192,12 @@ const restartGame = () => {
     }
     game.value.push(newRow.value);
   }
+  game.value.map((row) => {
+    return row.map((item) => ({
+      ...item,
+      keyType: 'empty',
+    }));
+  });
   isLoss.value = false;
   showOverModal.value = false;
   currentWord.value =
