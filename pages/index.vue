@@ -192,12 +192,6 @@ const restartGame = () => {
     }
     game.value.push(newRow.value);
   }
-  game.value.map((row) => {
-    return row.map((item) => ({
-      ...item,
-      keyType: 'empty',
-    }));
-  });
   isLoss.value = false;
   showOverModal.value = false;
   currentWord.value =
@@ -338,6 +332,14 @@ const handleKeyDown = (e) => {
 
 onMounted(() => {
   restartGame();
+  setTimeout(() => {
+    game.value.map((row) => {
+      return row.map((item) => ({
+        ...item,
+        keyType: 'empty',
+      }));
+    });
+  }, 1);
 
   document.addEventListener('keydown', handleKeyDown);
 });
